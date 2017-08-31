@@ -10,10 +10,13 @@ namespace ContactBook
     {
         private ObservableCollection<Contact> _contacts;
         private SQLiteAsyncConnection _connection;
+        private bool _isDataLoaded;
 
         public ContactsPage()
         {
             InitializeComponent();
+
+            _connection = DependencyService.Get < ISQLiteDb().GetConnection();
         }
 
         void Handle_Clicked(object sender, System.EventArgs e)
