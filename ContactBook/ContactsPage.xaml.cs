@@ -52,9 +52,28 @@ namespace ContactBook
             };
         }
 
-        void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        async void OnContactSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            if
+                (contactsListView.SelectedItem == null)
+                return;
+
+            var selectedContact = e.SelectedItem as Contact;
+
+            contactsListView.SelectedItem = null;
+
+            var page = new ContactDetailPage(selectedContact);
+            page.ContactUpdated += (source, contact) =>
+            {
+                selectedContact.Id = contact.Id;
+                selectedContact.FirstName = contact.FirstName;
+                selectedContact.LastName = contact.LastName;
+                selectedContact.Phone = contact.Phone;
+                selectedContact.Email = contact.Email;
+                selectedContact.IsBlocked = contact.IsBlocked;
+            };
+
+            await Navigation.PushAsync(page);
         }
 
         void OnDeleteContact(object sender, System.EventArgs e)
