@@ -1,100 +1,107 @@
-﻿using System;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
+using ContactBook.DataBase;
+using ContactBook.Models;
+using ContactBook.Views;
 using SQLite;
 using Xamarin.Forms;
 
-using ContactBook.Models;
-using ContactBook.DataBase;
-
-
-namespace ContactBook.Views
+namespace ContactBook
 {
-    public partial class ContactsPage : ContentPage
-    {
-        private ObservableCollection<Contact> _contacts;
-        private SQLiteAsyncConnection _connection;
-        private bool _isDataLoaded;
+	public partial class ContactsPage : ContentPage
+	{
+		private ObservableCollection<Contact> _contacts;
+		private SQLiteAsyncConnection _connection;
+		private bool _isDataLoaded;
 
-        public ContactsPage()
-        {
-            InitializeComponent();
+		public ContactsPage()
+		{
+			InitializeComponent();
 
-            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
-        }
+			_connection = DependencyService.Get<ISQLiteDb>().GetConnection();
+		}
 
-        protected override async void OnAppearing()
-        {
-            if
-                (_isDataLoaded)
-                return;
+		protected override async void OnAppearing()
+		{
+			// In a multi-page app, everytime we come back to this page, OnAppearing
+			// method is called, but we want to load the data only the first time
+			// this page is loaded. In other words, when we go to ContactDetailPage
+			// and come back, we don't want to reload the data. 
+            //The data is already there. 
+            //We can control this using a switch: isDataLoaded.
+			if (_isDataLoaded)
+				return;
 
-            _isDataLoaded = true;
-            await LoadData();
+			_isDataLoaded = true;
 
-            base.OnAppearing();
-        }
+			// I've extracted the logic for loading data into LoadData method. 
+			// Now the code in OnAppearing method looks a lot cleaner. The 
+			// purpose is very explicit. If data is loaded, return, otherwise,
+			// load data. Details of loading the data is delegated to LoadData
+			// method. 
+			await LoadData();
 
-        private async Task LoadData()
-        {
-            await _connection.CreateTableAsync<Contact>();
+			base.OnAppearing();
+		}
 
-            var contacts = await _connection.Table<Contact>().ToListAsync();
+		// Note that this method returns a Task, instead of void. Void should 
+		// only be used for event handlers (e.g. OnAppearing). In all other cases,
+		// you should return a Task or Task<T>.
+		private async Task LoadData()
+		{
+			await _connection.CreateTableAsync<Contact>();
 
-            _contacts = new ObservableCollection<Contact>(contacts);
-            contactsListView.ItemsSource = _contacts;
-        }
+			var contacts = await _connection.Table<Contact>().ToListAsync();
 
-        async void OnAddContact(object sender, System.EventArgs e)
-        {
-            var page = new ContactDetailPage(new Contact());
+			_contacts = new ObservableCollection<Contact>(contacts);
+			contactsListView.ItemsSource = _contacts;
+		}
 
-            page.ContactAdded += (source, contact) =>
-            {
-                _contacts.Add(contact);
-            };
-        }
+		async void OnAddContact(object sender, System.EventArgs e)
+		{
+			var page = new ContactDetailPage(new Contact());
 
-        async void OnContactSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            if
-                (contactsListView.SelectedItem == null)
-                return;
+			page.ContactAdded += (source, contact) =>
+			{
+				_contacts.Add(contact);
+			};
 
-            var selectedContact = e.SelectedItem as Contact;
+			await Navigation.PushAsync(page);
+		}
 
-            contactsListView.SelectedItem = null;
+		async void OnContactSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			if (contactsListView.SelectedItem == null)
+				return;
 
-            var page = new ContactDetailPage(selectedContact);
-            page.ContactUpdated += (source, contact) =>
-            {
-                selectedContact.Id = contact.Id;
-                selectedContact.FirstName = contact.FirstName;
-                selectedContact.LastName = contact.LastName;
-                selectedContact.Phone = contact.Phone;
-                selectedContact.Email = contact.Email;
-                selectedContact.IsBlocked = contact.IsBlocked;
-            };
+			var selectedContact = e.SelectedItem as Contact;
 
-            await Navigation.PushAsync(page);
-        }
+			contactsListView.SelectedItem = null;
 
-        async void OnDeleteContact(object sender, System.EventArgs e)
-        {
-            var contact = (sender as MenuItem).CommandParameter as Contact;
+			var page = new ContactDetailPage(selectedContact);
+			page.ContactUpdated += (source, contact) =>
+			{
+				selectedContact.Id = contact.Id;
+				selectedContact.FirstName = contact.FirstName;
+				selectedContact.LastName = contact.LastName;
+				selectedContact.Phone = contact.Phone;
+				selectedContact.Email = contact.Email;
+				selectedContact.IsBlocked = contact.IsBlocked;
+			};
 
-            if (await DisplayAlert
-                    ("Warning",
-                     $"Are you sure you want to delete {contact.FullName}?",
-                     "Yes",
-                     "No"))
-            {
-                _contacts.Remove(contact);
-                await _connection.DeleteAsync(contact);
-            }
+			await Navigation.PushAsync(page);
+		}
 
-        }
-    }
+		async void OnDeleteContact(object sender, System.EventArgs e)
+		{
+			var contact = (sender as MenuItem).CommandParameter as Contact;
+
+			if (await DisplayAlert("Warning", $"Are you sure you want to delete {contact.FullName}?", "Yes", "No"))
+			{
+				_contacts.Remove(contact);
+
+				await _connection.DeleteAsync(contact);
+			}
+		}
+	}
 }
