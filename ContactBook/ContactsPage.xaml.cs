@@ -25,7 +25,7 @@ namespace ContactBook
             if
                 (_isDataLoaded)
                 return;
-            
+
             _isDataLoaded = true;
             await LoadData();
 
@@ -76,9 +76,20 @@ namespace ContactBook
             await Navigation.PushAsync(page);
         }
 
-        void OnDeleteContact(object sender, System.EventArgs e)
+        async void OnDeleteContact(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            var contact = (sender as MenuItem).CommandParameter as contact;
+
+            if (await DisplayAlert
+                    ("Warning",
+                     $"Are you sure you want to delete {contact.FullName}?",
+                     "Yes",
+                     "No"))
+            {
+                _contacts.Remove(contact);
+                await _connection.DeleteAsync(contact);
+            }
+
         }
     }
 }
