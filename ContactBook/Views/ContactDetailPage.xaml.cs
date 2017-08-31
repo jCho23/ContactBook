@@ -36,7 +36,7 @@ namespace ContactBook.Views
             };
         }
 
-        async void OnSave (object sender, System.EventArgs e)
+        async void OnSave(object sender, System.EventArgs e)
         {
             var contact = BindingContext as Contact;
 
@@ -46,7 +46,21 @@ namespace ContactBook.Views
                 return;
             }
 
+            if (contact.Id == 0)
+            {
+                await _connection.InsertAsync(contact);
 
+                ContactAdded?.Invoke(this, contact);
+            }
+
+            else
+            {
+                await _connection.UpdateAsync(contact);
+                ContactUpdated?.Invoke(this, contact);
+
+            }
+
+            await Navigation.PopAsync();
         }
     }
 }

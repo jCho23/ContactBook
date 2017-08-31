@@ -1,9 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using Xamarin.Forms;
-using System.Collections.ObjectModel;
-using SQLite;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
+using SQLite;
+using Xamarin.Forms;
+
+using ContactBook.Models;
+using ContactBook.DataBase;
+
 
 namespace ContactBook.Views
 {
@@ -17,7 +22,7 @@ namespace ContactBook.Views
         {
             InitializeComponent();
 
-            _connection = DependencyService.Get < ISQLiteDb().GetConnection();
+            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
         }
 
         protected override async void OnAppearing()

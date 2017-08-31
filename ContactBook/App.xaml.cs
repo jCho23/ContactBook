@@ -8,7 +8,7 @@ namespace ContactBook
         {
             InitializeComponent();
 
-            MainPage = new ContactBookPage();
+            MainPage = new ContactsPage();
         }
 
         protected override void OnStart()

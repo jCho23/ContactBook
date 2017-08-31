@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{9302BA93-DA7C-46E5-916E-24F08EA2879B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ContactBook/DataBase/ISQLiteDb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContactBook/App.xaml.cs">
     <Files>
       <File FileName="ContactBook/Views/ContactsPage.xaml" Line="32" Column="37" />
       <File FileName="ContactBook/Views/ContactsPage.xaml.cs" Line="7" Column="1" />
       <File FileName="ContactBook/Views/ContactDetailPage.xaml" Line="51" Column="1" />
-      <File FileName="ContactBook/Views/ContactDetailPage.xaml.cs" Line="7" Column="1" />
+      <File FileName="ContactBook/Views/ContactDetailPage.xaml.cs" Line="63" Column="41" />
       <File FileName="ContactBook/Models/Contact.cs" Line="81" Column="2" />
-      <File FileName="ContactBook/DataBase/ISQLiteDb.cs" Line="5" Column="12" />
+      <File FileName="ContactBook/DataBase/ISQLiteDb.cs" Line="11" Column="1" />
+      <File FileName="ContactBook/App.xaml.cs" Line="11" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
