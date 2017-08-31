@@ -7,10 +7,18 @@
         <ToolbarItem 
             Text= "Add"
             Clicked= "Handle_Clicked" />
-
-
-
-
     </ContentPage.ToolbarItems>
- 
+        <ListView
+            x:Name= "contactsListView"
+            ItemSelected= "Handle_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+
+
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
 </ContentPage>
