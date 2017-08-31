@@ -42,11 +42,14 @@ namespace ContactBook
             contactsListView.ItemsSource = _contacts;
         }
 
-
-
-        void Handle_Clicked(object sender, System.EventArgs e)
+        async void OnAddContact(object sender, System.EventArgs e)
         {
-            throw new NotImplementedException();
+            var page = new ContactDetailPage(new Contact());
+
+            page.ContactAdded += (source, contact) =>
+            {
+                _contacts.Add(contact);
+            };
         }
 
         void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)

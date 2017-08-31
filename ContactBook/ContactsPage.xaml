@@ -2,12 +2,12 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="ContactBook.ContactPage">
+    x:Class="ContactBook.ContactsPage">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem 
             Text= "Add"
-            Clicked= "Handle_Clicked" />
+            Clicked= "OnAddContact" />
     </ContentPage.ToolbarItems>
 
         <ListView
