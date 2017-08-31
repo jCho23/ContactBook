@@ -35,5 +35,18 @@ namespace ContactBook.Views
 
             };
         }
+
+        async void OnSave (object sender, System.EventArgs e)
+        {
+            var contact = BindingContext as Contact;
+
+            if (String.IsNullOrWhiteSpace(contact.FullName))
+            {
+                await DisplayAlert("Error", "Please enter the name", "OK");
+                return;
+            }
+
+
+        }
     }
 }
