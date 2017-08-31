@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using ContactBook.Models;
 using Xamarin.Forms;
 using SQLite;
+using ContactBook.DataBase;
 
 namespace ContactBook.Views
 {
@@ -25,8 +27,13 @@ namespace ContactBook.Views
             BindingContext = new Contact
             {
                 Id = contact.Id,
+                FirstName = contact.FirstName,
+                LastName = contact.LastName,
+                Phone = contact.Phone,
+                Email = contact.Email,
+                IsBlocked = contact.IsBlocked
 
-            }
+            };
         }
     }
 }
