@@ -5,7 +5,7 @@ using System.Collections.ObjectModel;
 using SQLite;
 using System.Threading.Tasks;
 
-namespace ContactBook
+namespace ContactBook.Views
 {
     public partial class ContactsPage : ContentPage
     {
