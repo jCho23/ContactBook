@@ -83,7 +83,7 @@ namespace ContactBook.Views
 
         async void OnDeleteContact(object sender, System.EventArgs e)
         {
-            var contact = (sender as MenuItem).CommandParameter as contact;
+            var contact = (sender as MenuItem).CommandParameter as Contact;
 
             if (await DisplayAlert
                     ("Warning",
