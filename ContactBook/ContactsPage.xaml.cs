@@ -19,6 +19,22 @@ namespace ContactBook
             _connection = DependencyService.Get < ISQLiteDb().GetConnection();
         }
 
+        protected override async void OnAppearing()
+        {
+            if
+                (_isDataLoaded)
+                return;
+            
+            _isDataLoaded = true;
+            await LoadData();
+
+            base.OnAppearing();
+        }
+
+
+
+
+
         void Handle_Clicked(object sender, System.EventArgs e)
         {
             throw new NotImplementedException();
