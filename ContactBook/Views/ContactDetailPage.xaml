@@ -14,7 +14,7 @@
                 Title = "Name" >
                 <EntryCell 
                     Label= "First Name:"
-                    LabelColor= "Aqua"
+                    LabelColor= "Navy"
                     Text= "{Binding FirstName}" />
                 <EntryCell
                     Label= "Last Name" 
@@ -24,11 +24,11 @@
             <TableSection
                 Title= "Contact" >
                 <EntryCell
-                    Label= "Phone"
+                    Label= "Phone:"
                     Text= "{Binding Phone}"
                     Keyboard= "Numeric" />
                 <EntryCell
-                    Label= "Email"
+                    Label= "Email:"
                     Text= "{Binding Email}"
                     Keyboard= "Email" />
             </TableSection>
