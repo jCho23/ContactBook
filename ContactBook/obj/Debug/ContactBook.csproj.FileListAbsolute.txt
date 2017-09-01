@@ -17,6 +17,7 @@
 /Users/junecho/Projects/ContactBook/ContactBook/bin/Debug/Xamarin.Forms.Xaml.xml
 /Users/junecho/Projects/ContactBook/ContactBook/bin/Debug/SQLite-net.pdb
 /Users/junecho/Projects/ContactBook/ContactBook/bin/Debug/SQLite-net.xml
+/Users/junecho/Projects/ContactBook/ContactBook/obj/Debug/ContactBook.csprojResolveAssemblyReference.cache
 /Users/junecho/Projects/ContactBook/ContactBook/obj/Debug/ContactBook.csproj.CoreCompileInputs.cache
 /Users/junecho/Projects/ContactBook/ContactBook/obj/Debug/ContactBook.App.xaml.g.cs
 /Users/junecho/Projects/ContactBook/ContactBook/obj/Debug/ContactBook.Views.ContactsPage.xaml.g.cs
