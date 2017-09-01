@@ -11,10 +11,6 @@
             <Style x:Key= "labelColor" TargetType= "EntryCell">
                 <Setter Property= "LabelColor" Value= "Olive" />
             </Style>
-
-
-
-
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -40,10 +36,12 @@
                 Title= "Contact" >
                 <EntryCell
                     Label= "Phone:"
+                    LabelColor= "Olive"
                     Text= "{Binding Phone}"
                     Keyboard= "Numeric" />
                 <EntryCell
                     Label= "Email:"
+                    LabelColor= "Olive"
                     Text= "{Binding Email}"
                     Keyboard= "Email" />
             </TableSection>
