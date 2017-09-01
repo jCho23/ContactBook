@@ -4,6 +4,7 @@ using SQLite;
 
 using Xamarin.Forms;
 using ContactBook.iOS;
+using System.IO;
 
 [assembly: Dependency(typeof(SQLiteDb_iOS))]
 namespace ContactBook.iOS
@@ -12,7 +13,10 @@ namespace ContactBook.iOS
     {
         public SQLiteAsyncConnection GetConnection()
         {
-            //
+            var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            var path = Path.Combine(documentsPath, "ISQLiteDb");
+
+            return new SQLiteAsyncConnection(path);
         }
     }
 }
