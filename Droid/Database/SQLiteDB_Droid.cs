@@ -1,14 +1,15 @@
 ﻿using System;
-using Xamarin.Forms;
-using SQLite;
-using ContactBook.Droid.Database;
-using ContactBook.DataBase;
 using System.IO;
+
+using SQLite;
+using Xamarin.Forms;
+
+using ContactBook.DataBase;
+using ContactBook.Droid.Database;
 
 [assembly: Dependency(typeof(SQLiteDB_Droid))]
 
 namespace ContactBook.Droid.Database                 
-
 {
     public class SQLiteDB_Droid : ISQLiteDb
     {
