@@ -59,6 +59,7 @@
                         Text= "Save"
                         TextColor= "White"
                         BackgroundColor= "Olive"
+                        FontSize= "Large"
                         Clicked= "OnSave" />
                 </ViewCell>
             </TableSection>
