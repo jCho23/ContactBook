@@ -2,7 +2,9 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="ContactBook.Views.ContactDetailPage">
+    x:Class="ContactBook.Views.ContactDetailPage"
+    Title= "Contact Details"
+    BackgroundColor= "Black">
 
     <TableView
         Intent= "Form">
@@ -11,7 +13,8 @@
             <TableSection 
                 Title = "Name" >
                 <EntryCell 
-                    Label= "First Name" 
+                    Label= "First Name:"
+                    LabelColor= "Aqua"
                     Text= "{Binding FirstName}" />
                 <EntryCell
                     Label= "Last Name" 

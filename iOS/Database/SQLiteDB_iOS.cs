@@ -10,7 +10,7 @@ using ContactBook.DataBase;
 [assembly: Dependency(typeof(SQLiteDb_iOS))]
 namespace ContactBook.iOS
 {
-    public class SQLiteDb_iOS :ISQLiteDb
+    public class SQLiteDb_iOS : ISQLiteDb
     {
         public SQLiteAsyncConnection GetConnection()
         {
