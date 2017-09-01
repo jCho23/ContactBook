@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{9302BA93-DA7C-46E5-916E-24F08EA2879B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ContactBook/Views/ContactsPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContactBook/Views/ContactDetailPage.xaml.cs">
     <Files>
-      <File FileName="ContactBook/Views/ContactDetailPage.xaml" Line="29" Column="34" />
+      <File FileName="ContactBook/Views/ContactDetailPage.xaml" Line="13" Column="21" />
       <File FileName="iOS/Main.cs" Line="17" Column="1" />
       <File FileName="ContactBook/Views/ContactsPage.xaml" Line="6" Column="21" />
+      <File FileName="ContactBook/Views/ContactDetailPage.xaml.cs" Line="25" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
