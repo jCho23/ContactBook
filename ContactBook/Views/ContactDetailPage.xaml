@@ -6,6 +6,18 @@
     Title= "Contact Details"
     BackgroundColor= "Black">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key= "labelColor" TargetType= "EntryCell">
+                <Setter Property= "LabelColor" Value= "Olive" />
+            </Style>
+
+
+
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <TableView
         Intent= "Form">
         <TableRoot>
@@ -15,9 +27,12 @@
                 <EntryCell 
                     Label= "First Name:"
                     LabelColor= "Olive"
+                    Keyboard= "Text"
                     Text= "{Binding FirstName}" />
                 <EntryCell
                     Label= "Last Name:" 
+                    LabelColor= "Olive"
+                    Keyboard= "Text"
                     Text = "{Binding LastName}" />
             </TableSection>
 

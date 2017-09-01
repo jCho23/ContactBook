@@ -1,14 +1,9 @@
 ﻿<Properties StartupConfiguration="{9302BA93-DA7C-46E5-916E-24F08EA2879B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Database/SQLiteDB_IOS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ContactBook/Views/ContactsPage.xaml">
     <Files>
-      <File FileName="ContactBook/Views/ContactsPage.xaml" Line="36" Column="1" />
-      <File FileName="ContactBook/Views/ContactsPage.xaml.cs" Line="21" Column="49" />
-      <File FileName="ContactBook/Views/ContactDetailPage.xaml" Line="51" Column="1" />
-      <File FileName="ContactBook/Views/ContactDetailPage.xaml.cs" Line="25" Column="36" />
-      <File FileName="ContactBook/Models/Contact.cs" Line="81" Column="2" />
-      <File FileName="ContactBook/DataBase/ISQLiteDb.cs" Line="11" Column="1" />
-      <File FileName="iOS/Database/SQLiteDB_IOS.cs" Line="12" Column="2" />
-      <File FileName="Droid/Database/SQLiteDB_Droid.cs" Line="1" Column="1" />
+      <File FileName="ContactBook/Views/ContactDetailPage.xaml" Line="29" Column="34" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="ContactBook/Views/ContactsPage.xaml" Line="6" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
