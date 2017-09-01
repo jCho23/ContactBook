@@ -44,6 +44,8 @@
                 <ViewCell>
                     <Button
                         Text= "Save"
+                        TextColor= "White"
+                        BackgroundColor= "Olive"
                         Clicked= "OnSave" />
                 </ViewCell>
             </TableSection>
