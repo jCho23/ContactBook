@@ -1,10 +1,11 @@
 ﻿using System;
-using ContactBook.DataBase;
-using SQLite;
-
-using Xamarin.Forms;
-using ContactBook.iOS;
 using System.IO;
+
+using SQLite;
+using Xamarin.Forms;
+
+using ContactBook.iOS;
+using ContactBook.DataBase;
 
 [assembly: Dependency(typeof(SQLiteDb_iOS))]
 namespace ContactBook.iOS
