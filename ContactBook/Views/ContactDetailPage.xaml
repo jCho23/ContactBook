@@ -14,10 +14,10 @@
                 Title = "Name" >
                 <EntryCell 
                     Label= "First Name:"
-                    LabelColor= "Navy"
+                    LabelColor= "Olive"
                     Text= "{Binding FirstName}" />
                 <EntryCell
-                    Label= "Last Name" 
+                    Label= "Last Name:" 
                     Text = "{Binding LastName}" />
             </TableSection>
 
