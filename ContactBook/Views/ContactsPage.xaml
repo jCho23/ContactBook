@@ -8,7 +8,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem 
             Text= "Add"
-            Clicked= "OnAddContact" />
+            Clicked= "OnAddContact" 
+            AutomationId= "addButton"/>
     </ContentPage.ToolbarItems>
 
         <ListView
