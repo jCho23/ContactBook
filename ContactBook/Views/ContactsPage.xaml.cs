@@ -1,10 +1,12 @@
-﻿using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using ContactBook.DataBase;
-using ContactBook.Models;
-using ContactBook.Views;
+﻿using System.Threading.Tasks;
+using System.Collections.ObjectModel;
+
 using SQLite;
 using Xamarin.Forms;
+
+using ContactBook.Views;
+using ContactBook.Models;
+using ContactBook.DataBase;
 
 namespace ContactBook
 {

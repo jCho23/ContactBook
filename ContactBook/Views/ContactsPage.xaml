@@ -19,8 +19,8 @@
                 <DataTemplate>
 
                     <TextCell
-                        Text= "{Binding FullName}"
                         Detail= "{Binding Id}" >
+                        Text= "{Binding FullName}"
                         <TextCell.ContextActions>
                             <MenuItem
                                 Text= "Delete"
