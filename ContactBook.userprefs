@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{9302BA93-DA7C-46E5-916E-24F08EA2879B}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Xamarin.UITest/Tests.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Xamarin.UITest/Pages/BaseTest.cs">
     <Files>
       <File FileName="ContactBook/Views/ContactDetailPage.xaml" Line="5" Column="49" />
       <File FileName="ContactBook/Views/ContactsPage.xaml" Line="21" Column="30" />
       <File FileName="ContactBook/Views/ContactDetailPage.xaml.cs" Line="12" Column="2" />
-      <File FileName="ContactBook/Views/ContactsPage.xaml.cs" Line="8" Column="1" />
+      <File FileName="ContactBook/Views/ContactsPage.xaml.cs" Line="14" Column="3" />
       <File FileName="Xamarin.UITest/Tests.cs" Line="1" Column="1" />
+      <File FileName="Xamarin.UITest/Pages/BaseTest.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
