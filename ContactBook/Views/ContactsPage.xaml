@@ -25,6 +25,7 @@
                             <MenuItem
                                 Text= "Delete"
                                 IsDestructive= "true"
+                                AutomationId= "delete"
                                 Clicked= "OnDeleteContact"
                                 CommandParameter= "{Binding .}" />
                         </TextCell.ContextActions>

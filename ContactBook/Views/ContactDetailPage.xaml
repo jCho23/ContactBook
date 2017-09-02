@@ -53,7 +53,7 @@
             <TableSection
                 Title= "Other" >
                 <SwitchCell
-                    Text= "Blocked"
+                    Text= "Blocked"                  
                     AutomationId= "blockedSwitchCell"
                     On= "{Binding IsBlocked}" />
             </TableSection>

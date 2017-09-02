@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using ContactBook.Models;
-using Xamarin.Forms;
 using SQLite;
+using Xamarin.Forms;
+
+using ContactBook.Models;
 using ContactBook.DataBase;
 
 namespace ContactBook.Views
@@ -32,7 +33,6 @@ namespace ContactBook.Views
                 Phone = contact.Phone,
                 Email = contact.Email,
                 IsBlocked = contact.IsBlocked
-
             };
         }
 
@@ -57,7 +57,6 @@ namespace ContactBook.Views
             {
                 await _connection.UpdateAsync(contact);
                 ContactUpdated?.Invoke(this, contact);
-
             }
 
             await Navigation.PopAsync();
