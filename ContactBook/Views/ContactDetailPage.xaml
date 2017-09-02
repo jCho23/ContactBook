@@ -39,14 +39,14 @@
                 <EntryCell
                     Label= "Phone:"
                     LabelColor= "Olive"
-                    Text= "{Binding Phone}"
                     Keyboard= "Numeric" 
+                    Text= "{Binding Phone}"
                     AutomationId= "phone"/>
                 <EntryCell
                     Label= "Email:"
                     LabelColor= "Olive"
-                    Text= "{Binding Email}"
                     Keyboard= "Email"
+                    Text= "{Binding Email}"
                     AutomationId= "Email"/>
             </TableSection>
 
@@ -54,18 +54,18 @@
                 Title= "Other" >
                 <SwitchCell
                     Text= "Blocked"                  
-                    AutomationId= "blockedSwitchCell"
-                    On= "{Binding IsBlocked}" />
+                    On= "{Binding IsBlocked}" 
+                    AutomationId= "blockedSwitchCell" />
             </TableSection>
 
             <TableSection>
                 <ViewCell>
                     <Button
                         Text= "Save"
-                        TextColor= "White"
-                        BackgroundColor= "Olive"
                         FontSize= "Large"
                         Clicked= "OnSave" 
+                        TextColor= "White"
+                        BackgroundColor= "Olive"
                         AutomationId= "saveButton"/>
                 </ViewCell>
             </TableSection>
