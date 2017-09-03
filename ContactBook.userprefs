@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{9302BA93-DA7C-46E5-916E-24F08EA2879B}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="Xamarin.UITest/Pages/ContactsPage.cs">
     <Files>
-      <File FileName="Xamarin.UITest/Pages/ContactsPage.cs" Line="7" Column="15" />
+      <File FileName="Xamarin.UITest/Pages/ContactsPage.cs" Line="31" Column="1" />
       <File FileName="ContactBook.Shared/Constants/AutomationIdConstants.cs" Line="5" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
