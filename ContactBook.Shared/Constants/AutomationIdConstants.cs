@@ -1,10 +1,11 @@
-﻿using System;
-namespace ContactBook.Shared.Constants
+﻿namespace ContactBook.Shared.Constants
 {
-    public class AutomationIdConstants
+    public static class AutomationIdConstants
     {
-        public AutomationIdConstants()
-        {
-        }
+        #region Contacts Page
+        public const string AddButton = "AddButton";
+        #endregion
+
+
     }
 }
