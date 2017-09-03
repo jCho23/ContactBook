@@ -10,9 +10,13 @@ namespace Xamarin.UITest.Pages
 		readonly Query _textEntry;
 		readonly Query _textLabel;
 
+		readonly Query _goButtonUsingID;
+		readonly Query _textEntryUsingID;
 
-        public ContactsPage()
-        {
+
+        public ContactsPage(IApp app, Platform platform) : base(app, platform)
+        { 
+        
         }
     }
 }
