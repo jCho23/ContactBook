@@ -6,13 +6,9 @@ namespace Xamarin.UITest.Pages
 {
     public class ContactsPage : BasePage
     {
-		readonly Query _goButton;
-		readonly Query _textEntry;
-		readonly Query _textLabel;
+		readonly Query _AddButton;
 
-		readonly Query _goButtonUsingID;
-		readonly Query _textEntryUsingID;
-
+        readonly Query _AddButtonUsingID;
 
         public ContactsPage(IApp app, Platform platform) : base(app, platform)
         { 
