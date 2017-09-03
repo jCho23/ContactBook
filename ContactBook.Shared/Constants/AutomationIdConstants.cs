@@ -6,6 +6,9 @@
         public const string AddButton = "AddButton";
         #endregion
 
+        public const string FirstName = "FirstName";
+        public const string 
+
 
     }
 }
