@@ -27,5 +27,8 @@
   <ItemGroup>
     <Folder Include="Constants\" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\AutomationIdConstants.cs" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
